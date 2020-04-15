@@ -1,4 +1,4 @@
-package com.com.wch.myrule;
+package com.wch.myrule;
 
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RandomRule;

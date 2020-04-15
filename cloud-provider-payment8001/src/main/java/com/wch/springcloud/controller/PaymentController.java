@@ -1,5 +1,6 @@
 package com.wch.springcloud.controller;
 
+import com.sun.org.apache.bcel.internal.generic.RETURN;
 import com.wch.springcloud.entities.CommonResult;
 import com.wch.springcloud.entities.Payment;
 import com.wch.springcloud.service.PaymentService;
@@ -61,6 +62,11 @@ public class PaymentController {
             log.info(instance.getHost()+ "\t" + instance.getPort() + "\t" + instance.getUri());
         }
         return this.discoveryClient;
+    }
+
+    @GetMapping(value = "/payment/lb")
+    public String getPaymentLB(){
+        return port;
     }
 
     @GetMapping("/payment/feign/timeout")
